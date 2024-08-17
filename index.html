@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bookshelf</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="head_bar">
+      <h1 class="head_bar__title">Bookshel App by <a href="">Rifat</a></h1>
+    </header>
+    <main>
+      <section class="input_section">
+        <h2>Masukkan Buku Baru</h2>
+        <form id="inputBook">
+          <div class="input">
+            <label for="inputBookTitle">Judul</label>
+            <input
+              type="text"
+              id="inputBookTitle"
+              placeholder="Judul Buku"
+              required
+            />
+          </div>
+          <div class="input">
+            <label for="inputBookAuthor">Penulis</label>
+            <input
+              type="text"
+              id="inputBookAuthor"
+              placeholder="Penulis Buku"
+              required
+            />
+          </div>
+          <div class="input-inline">
+            <label for="inputBookIsComplete">Selesai dibaca</label>
+            <input type="checkbox" id="inputBookIsComplete" />
+          </div>
+          <button id="bookSubmit" type="submit">
+            Masukkan Buku ke rak <span>Belum selesai dibaca</span>
+          </button>
+        </form>
+      </section>
+
+      <section class="search_section">
+        <h2>Cari Buku</h2>
+        <form id="searchBook">
+          <label for="searchBookTitle">Judul</label>
+          <input type="text" id="searchBookTitle" placeholder="Pencarian" />
+          <button id="searchSubmit" type="submit">Cari</button>
+        </form>
+      </section>
+
+      <section class="book_shelf">
+        <h2>Belum selesai dibaca</h2>
+        <div id="incompleteBookShelfList" class="book_list"></div>
+      </section>
+
+      <section class="book_shelf">
+        <h2>Selesai dibaca</h2>
+        <div id="completeBookShelfList" class="book_list"></div>
+      </section>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
